@@ -44,3 +44,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+# APK binary file
+src/assets/apk/AlgoVirtual.apk
