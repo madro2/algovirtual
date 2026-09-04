@@ -3723,6 +3723,7 @@ body.is-touch #banner {
         z-index: 10002;
         background: #181920;
         padding: 0.75em 1.25em;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     }
     #navPanel .link {
         border: 0;
@@ -3764,16 +3765,16 @@ body.is-touch #banner {
         width: 6.25em;
     }
     body.navPanel-visible #page-wrapper {
-        -moz-transform: translateX(275px);
-        -webkit-transform: translateX(275px);
-        -ms-transform: translateX(275px);
-        transform: translateX(275px);
+        -moz-transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
     }
     body.navPanel-visible #titleBar {
-        -moz-transform: translateX(275px);
-        -webkit-transform: translateX(275px);
-        -ms-transform: translateX(275px);
-        transform: translateX(275px);
+        -moz-transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
     }
     body.navPanel-visible #navPanel {
         -moz-transform: translateX(0);

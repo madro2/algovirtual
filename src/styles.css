@@ -14,3 +14,9 @@
 a.title {
     font-family: 'varino';
 }
+
+#titleBar .title {
+    font-family: 'varino', sans-serif !important;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+}

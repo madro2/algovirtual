@@ -45,20 +45,14 @@
     // Title Bar.
     $(
             '<div id="titleBar">' +
-            '<a (click)="onClick($event)" id="openNavPanel" href="#navPanel" class="toggle"></a>' +
-            '<span class="title">' + $('#logo').html() + '</span>' +
+            '<a id="openNavPanel" href="#navPanel" class="toggle"></a>' +
+            '<span class="title">ALGO VIRTUAL</span>' +
             '</div>'
         )
         .appendTo($body);
 
     // Panel.
-    $(
-            '<div id="navPanel">' +
-            '<nav>' +
-            '</nav>' +
-            '</div>'
-        )
-        .appendTo($body)
+    $('#navPanel')
         .panel({
             delay: 500,
             hideOnClick: true,
