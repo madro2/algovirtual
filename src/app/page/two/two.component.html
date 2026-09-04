@@ -1,28 +1,37 @@
-<section id="two" class="spotlight style2 right" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom">
-    <div class=" video-background ">
-        <div class="video-foreground ">
-            <iframe src="https://www.youtube.com/embed/VrIlvYtMihk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section #sectionRef id="two" class="spotlight style2 right" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom">
+    <!-- Video background / player container -->
+    <div class="video-container">
+        <video #videoPlayer
+               class="bg-video"
+               playsinline
+               webkit-playsinline
+               loop
+               muted
+               preload="metadata"
+               poster="./assets/video/algovirtual-poster.jpg">
+            <source src="./assets/video/algovirtual.webm" type="video/webm">
+            <source src="./assets/video/algovirtual.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video Controls: Audio toggle and Play/Pause -->
+        <div class="video-overlay-controls">
+            <button type="button" class="btn-video-control" (click)="toggleMute($event)" [attr.aria-label]="isMuted ? 'Activar sonido' : 'Silenciar sonido'" [title]="isMuted ? 'Activar sonido' : 'Silenciar'">
+                <i [class]="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"></i>
+                <span class="btn-label">{{ isMuted ? 'Activar audio' : 'Silenciar' }}</span>
+            </button>
+            <button type="button" class="btn-video-control btn-play" (click)="togglePlay($event)" [attr.aria-label]="isPlaying ? 'Pausar' : 'Reproducir'" [title]="isPlaying ? 'Pausar' : 'Reproducir'">
+                <i [class]="isPlaying ? 'fas fa-pause' : 'fas fa-play'"></i>
+            </button>
         </div>
     </div>
-
-    <span class="image fit main">
-        <div class="video-responsive ">
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5qJp6xlKEug" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            <!-- <iframe src="https://www.youtube.com/watch?v=VrIlvYtMihk&ab_channel=AlgoVirtual" allowfullscreen></iframe> -->
-
-            <iframe src="https://www.youtube.com/embed/VrIlvYtMihk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </span>
 
     <div class="content">
         <header>
             <h2 class="algoVistual1">Construcción de </h2>
             <h2 class="algoVistual2 ">ALGO VIRTUAL</h2>
-
         </header>
         <br>
         <div>
-
             En base a la investigación y a la estrategia de Aprendizaje basado en problemas. (ABP) se diseña la app “algo virtual” cuyo nombre provine de los dos conceptos primordiales en los cuales se basa esta investigación. “algo” se deriva de la palabra algoritmo
             que tiene una fuerte relación con la forma de expresar la lógica y virtual que a su vez se refiere a la experiencia mediante la cual, el usuario de
             <h5 class="algoVistual ">algo virtual </h5>puede experimentar en el proceso de fortalecer sus destrezas para razonar lógicamente.
