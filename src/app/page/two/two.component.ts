@@ -123,6 +123,14 @@ export class TwoComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
+  scrollTo(targetId: string, event: Event): void {
+    event.preventDefault();
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   ngOnDestroy(): void {
     if (this.observer) {
       this.observer.disconnect();

@@ -26,3 +26,14 @@ a.title {
     font-size: 0.9em !important;
     font-weight: bold !important;
 }
+
+/* Ensure smooth scrolling across the entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Guarantee that sections sit exactly on boundary without transform offsets */
+section.spotlight {
+    box-sizing: border-box;
+    scroll-margin-top: 0px;
+}

@@ -1,15 +1,12 @@
 <!-- Banner -->
-<section id="banner" class="animacionSalir" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+<section id="banner" class="animacionSalir">
     <div class="content">
         <header>
-
             <h2 class="titleSup">ALGO</h2>
             <h2 class="titleInf">VIRTUAL</h2>
-
             <p>Realidad virtual para el desarrollo de pensamiento<br/> algorítmico en docentes universitarios,<br/> caso universidad Cesmag.</p>
         </header>
         <span class="image"><img src="./../../../assets/images/slider01/bubble.png" alt="" /></span>
     </div>
-    <a href="#one" class="goto-next" (click)="next= true">Next</a>
-    <!-- <a [href]="'#one'" class="goto-next">Next</a> -->
+    <a href="#one" class="goto-next scrolly" (click)="scrollTo('#one', $event)">Next</a>
 </section>

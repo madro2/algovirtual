@@ -12,4 +12,11 @@ export class OneComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollTo(targetId: string, event: Event): void {
+    event.preventDefault();
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
