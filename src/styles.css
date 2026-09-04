@@ -1,22 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~animate.css/animate.min';
+
 @font-face {
-    font-family: varino;
-    src: url(./assets/fonts/varino/Varino_Bold.otf) format("opentype");
+    font-family: 'varino';
+    src: url('./assets/fonts/varino/Varino_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: varino;
-    src: url(./assets/fonts/centuryGothic/GOTHIC.TTF) format("centuryGothic");
+    font-family: 'centuryGothic';
+    src: url('./assets/fonts/centuryGothic/GOTHIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 a.title {
-    font-family: 'varino';
+    font-family: 'varino', sans-serif;
 }
 
 #titleBar .title {
     font-family: 'varino', sans-serif !important;
-    letter-spacing: 2px;
-    font-size: 0.9em;
+    letter-spacing: 2px !important;
+    font-size: 0.9em !important;
+    font-weight: bold !important;
 }
